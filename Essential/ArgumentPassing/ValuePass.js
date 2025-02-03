@@ -16,3 +16,14 @@ let person = { name: "Hasib" };
 
 updateValue2(person);
 console.log(person.name);
+
+//
+function modifyObject(obj) {
+  obj.age = 30; // Modifies original
+}
+
+let user = { name: "Alice", age: 25 };
+modifyObject(user);
+console.log(user.age); // 30
+
+// Note : Reassigning the reference (does NOT affect the original object).
