@@ -1,0 +1,78 @@
+🔥 Shallow Copy vs. Deep Copy in JavaScript
+When working with objects in JavaScript, sometimes you need to copy them. However, there are two types of copies:
+
+Shallow Copy 🏊‍♂️ → Copies only the first level of properties. Nested objects remain linked to the original.
+Deep Copy 🌊 → Creates a completely new, independent copy, including nested objects.
+1️⃣ Shallow Copy using Object.assign()
+🔹 Object.assign(target, source) creates a shallow copy of an object.
+🔹 It only copies primitive values (e.g., numbers, strings), but nested objects/arrays are still referenced.
+
+✅ Example of Object.assign()
+javascript
+Copy
+Edit
+let original = {
+  name: "Alice",
+  details: { age: 25, city: "New York" } // Nested object
+};
+
+let shallowCopy = Object.assign({}, original);
+
+// Modify shallow copy
+shallowCopy.name = "Bob"; // ✅ Changes only the copy
+shallowCopy.details.age = 30; // ❌ Also changes `original.details.age`!
+
+console.log(original.details.age); // 30 ❌ (Unexpected!)
+console.log(shallowCopy.details.age); // 30
+🔹 Why is this happening?
+Object.assign() copies primitive properties (name), so "Alice" remains independent.
+However, details is a nested object, so only the reference is copied.
+Any changes to shallowCopy.details also modify the original.
+📌 When to Use?
+✅ If the object doesn’t contain nested structures, Object.assign() is fine.
+❌ If the object has nested objects/arrays, it won’t fully copy them.
+
+2️⃣ Deep Copy using JSON.parse(JSON.stringify(obj))
+🔹 This method creates a completely independent copy of the original object, including all nested properties.
+🔹 It converts the object to a JSON string and then parses it back into a new object.
+
+✅ Example of Deep Copy
+javascript
+Copy
+Edit
+let original = {
+  name: "Alice",
+  details: { age: 25, city: "New York" } // Nested object
+};
+
+let deepCopy = JSON.parse(JSON.stringify(original));
+
+// Modify deep copy
+deepCopy.details.age = 30; // ✅ Only affects `deepCopy`
+
+console.log(original.details.age); // 25 ✅ (Original remains unchanged)
+console.log(deepCopy.details.age); // 30
+🔹 Why is this better?
+This breaks all references between the original and copied object.
+Nested objects and arrays are fully copied, not just referenced.
+📌 When to Use?
+✅ When you need a completely independent copy of an object.
+❌ Doesn’t work with functions, undefined, or special objects like Date.
+
+🔥 Summary Table: Shallow vs. Deep Copy
+Feature	Shallow Copy (Object.assign())	Deep Copy (JSON.parse(JSON.stringify()))
+Copies first-level properties	✅ Yes	✅ Yes
+Copies nested objects?	❌ No (only references copied)	✅ Yes (fully copied)
+Affects original when nested object is modified?	✅ Yes	❌ No
+Works with all data types?	✅ Yes (except nested objects)	❌ No (loses functions, Date, undefined)
+Performance	⚡ Fast	🐢 Slower (converts to JSON)
+🚀 Alternative for Advanced Deep Copies
+For better deep copies that support functions, dates, and special objects, use Lodash’s cloneDeep():
+
+javascript
+Copy
+Edit
+const _ = require('lodash');
+let deepCopy = _.cloneDeep(original);
+✅ Supports functions, Date, and other special objects.
+✅ More reliable for complex structures.
