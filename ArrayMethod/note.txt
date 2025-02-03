@@ -6,3 +6,4 @@ filter	Filters elements based on a test.                    New array	       No 
 every	Tests if all elements pass a condition	            (boolean)          No	                 Yes (on false)
 some	Tests if at least one element passes a condition	(boolean)	       No	                 Yes (on true)
 -----------------------------------------------------------------------------------------------
+explain array method with several example also real life example  every, filter, forEach , map, reduce, some, split also other related method like this and explain when which should we this . 
