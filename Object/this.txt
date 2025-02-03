@@ -1,0 +1,30 @@
+7️⃣ this in Event Listeners
+🔹 When used inside an event handler, this refers to the element that triggered the event.
+
+----------------------------------------
+document.getElementById("btn").addEventListener("click", function() {
+    console.log(this); // Refers to the clicked button
+});
+🔹 Arrow functions do not bind this in event listeners:
+
+---------------------------------------
+document.getElementById("btn").addEventListener("click", () => {
+    console.log(this); // Refers to the global object (not the button)
+});
+✔ Use regular functions when you need this to refer to the event target.
+-----------------------------------
+🚀 Final Summary
+Scenario	        Use Regular Function	Use Arrow Function
+Object Methods	         ✅ Yes	            ❌ No
+Constructor Functions	 ✅ Yes	            ❌ No
+Class Methods	         ✅ Yes	            ❌ No
+Event Listeners	         ✅ Yes	            ❌ No
+setTimeout()	         ❌ No	            ✅ Yes
+Nested Functions	     ❌ No	            ✅ Yes
+call(), apply(), bind()	 ✅ Yes	            ❌ No
+
+---------------------------------------
+🔥 Key Takeaways
+✔ Use regular functions when this should be dynamic.
+✔ Use arrow functions when you want this to inherit from the surrounding scope.
+✔ Avoid arrow functions in object methods and event listeners.
