@@ -27,3 +27,32 @@ modifyObject(user);
 console.log(user.age); // 30
 
 // Note : Reassigning the reference (does NOT affect the original object).
+function reassignObject(obj) {
+  obj = { name: "New User", age: 40 };
+}
+
+let users = { name: "Alice", age: 23 };
+reassignObject(users);
+
+console.log(users.age);
+
+// Arrays are passed by reference :
+function modifyArray(arr) {
+  arr.push(7); // modify original array.
+}
+
+let numbers = [1, 2, 3, 3, 3];
+modifyArray(numbers);
+console.log(numbers);
+
+// avoid modify array.
+
+function modifyArray(arr) {
+  let newArr = [...arr];
+  newArr.push(5);
+  console.log("Inside function:", newArr);
+}
+
+let number = [3, 3, 3, 2, 5];
+modifyArray(number);
+console.log("Outside function:", number);

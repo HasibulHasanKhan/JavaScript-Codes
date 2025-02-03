@@ -1,0 +1,6 @@
+6. How to Avoid Unintended Changes with Pass by Reference?
+If you want to prevent modifying the original object or array:
+
+Use the Spread Operator (...) to create a copy.
+Use Object.assign() for shallow copies.
+Use JSON.parse(JSON.stringify(obj)) for deep copies.
