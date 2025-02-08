@@ -1,0 +1,13 @@
+* What is a Higher-Order Function?
+A higher-order function is a function that:
+
+Takes another function as an argument (callback function).
+
+Returns another function as its result.
+📌 Why Use Higher-Order Functions?
+
+Code reusability: Write less and do more.
+
+Functional programming: Makes JavaScript more declarative.
+
+Improved readability: Simplifies complex operations.
