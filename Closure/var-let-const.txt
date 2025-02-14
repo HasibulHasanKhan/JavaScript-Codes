@@ -1,0 +1,108 @@
+📌 1. var (Function Scoped)
+✅ Characteristics of var
+1️⃣ Function Scoped → The variable is available inside the entire function.
+2️⃣ Can be redeclared → You can declare the same var variable multiple times.
+3️⃣ Hoisted with undefined → The variable is hoisted but initialized as undefined.
+4️⃣ Not Block Scoped → If declared inside a block {}, it still leaks outside.
+
+📝 Example 1: var is Function Scoped
+
+function example() {
+    if (true) {
+        var x = 10;
+    }
+    console.log(x); // ✅ Accessible (function scope)
+}
+
+example(); // Output: 10
+
+📝 Example 2: var is Hoisted (with undefined)
+
+console.log(a); // Output: undefined (Not Error!)
+var a = 5;
+console.log(a); // Output: 5
+
+❌ Problems with var
+1️⃣ No Block Scope
+2️⃣ Hoisting can cause unexpected undefined errors
+3️⃣ Can be accidentally redeclared
+
+
+------------------------------------------
+
+📌 2. let (Block Scoped)
+✅ Characteristics of let
+1️⃣ Block Scoped → The variable is only accessible inside {}
+2️⃣ Cannot be redeclared → But can be reassigned
+3️⃣ Hoisted but NOT initialized → If used before declaration, it gives an error
+4️⃣ Useful for mutable (changeable) values
+
+📝 Example 1: let is Block Scoped
+
+function example() {
+    if (true) {
+        let y = 10;
+    }
+    console.log(y); // ❌ Error: y is not defined (Block Scoped)
+}
+example();
+🔹 Unlike var, let does not leak outside the block.
+
+📝 Example 2: let Cannot be Redeclared
+
+let age = 25;
+let age = 30; // ❌ Error: Identifier 'age' has already been declared
+🔹 Once declared, you cannot declare let again in the same scope.
+
+📝 Example 3: let is Hoisted but Not Initialized
+
+console.log(b); // ❌ ReferenceError: Cannot access 'b' before initialization
+let b = 5;
+console.log(b);
+
+-------------------------------------------
+📌 3. const (Block Scoped & Immutable)
+✅ Characteristics of const
+1️⃣ Block Scoped → Like let, only accessible inside {}
+2️⃣ Cannot be Redeclared or Reassigned → Once assigned, value cannot change
+3️⃣ Hoisted but Not Initialized → Cannot be used before declaration
+4️⃣ Must be Initialized at Declaration → Cannot be declared without a value
+
+
+📝 Example 1: const is Block Scoped
+
+if (true) {
+    const z = 100;
+}
+console.log(z); // ❌ Error: z is not defined (Block Scoped)
+🔹 Like let, const does not leak outside {}.
+
+📝 Example 2: const Cannot be Reassigned
+
+const pi = 3.14;
+pi = 3.1416; // ❌ Error: Assignment to constant variable
+🔹 Once assigned, a const variable cannot change.
+
+📝 Example 3: const Must be Initialized
+
+const a; // ❌ SyntaxError: Missing initializer in const declaration
+a = 10;
+🔹 You must assign a value when declaring const.
+
+📝 Example 4: const with Objects (Properties Can Change)
+
+const person = { name: "John", age: 25 };
+person.age = 30;  // ✅ Allowed
+console.log(person.age); // Output: 30
+
+person = { name: "Doe", age: 40 }; // ❌ Error: Assignment to constant variable
+🔹 The person object itself cannot change, but its properties can.
+----------------------------------------
+📌 4. Comparison Table
+Feature	var	let	const
+Scope	Function Scoped	Block Scoped	Block Scoped
+Hoisting	Hoisted with undefined	Hoisted but not initialized	Hoisted but not initialized
+Redeclaration	✅ Allowed	❌ Not Allowed	❌ Not Allowed
+Reassignment	✅ Allowed	✅ Allowed	❌ Not Allowed
+Initialization Required?	❌ No	❌ No	✅ Yes
+Best Used For	Legacy code (Avoid in modern JS)	Variables that will change	Constants or immutable references
