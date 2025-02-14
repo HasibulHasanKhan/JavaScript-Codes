@@ -93,13 +93,13 @@ Closure are frequently used with event listeners or asynchronous operations ot "
 //-------------------------------------------------------------
 // Call Stack
 function first() {
-  console.log("First function");
   second();
+  console.log("First function");
 }
 
 function second() {
-  console.log("Second function");
   third();
+  console.log("Second function");
 }
 
 function third() {
