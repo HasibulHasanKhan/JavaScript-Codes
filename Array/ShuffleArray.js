@@ -8,6 +8,8 @@ function shuffleArray(array) {
 
   return shuffled;
 }
-console.log(shuffleArray([1, 2, 3, 4, 5])); // Example output: [3, 1, 5, 4, 2]
-console.log(shuffleArray(["a", "b", "c", "d", "e"])); // Example output: ["c", "e", "a", "b", "d"]
+let arr = [1, 2, 3, 4, 5];
+console.log(shuffleArray(arr));
+
+console.log(arr);
 console.log(Math.random() * 10 + 1);

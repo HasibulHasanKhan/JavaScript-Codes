@@ -30,3 +30,19 @@ let x = 1,
 [x, y, z] = [z, x, y];
 
 console.log(x, y, z);
+
+// Swapping Characters in a String (Using Array)
+let str = "Hello";
+let arr = str.split("");
+[arr[0], arr[2]] = [arr[2], arr[0]];
+str = arr.join("");
+console.log(str);
+
+// Swapping Items Dynamically
+function swapItems(arr, index1, index2) {
+  [arr[index1], arr[index2]] = [arr[index2], arr[index1]];
+}
+let nums = [10, 20, 30, 40, 50];
+swapItems(nums, 1, 3);
+
+console.log(nums);
