@@ -1,0 +1,17 @@
+console.log(): Regular info about program flow.
+
+console.warn(): Non-critical issues that could become problems.
+
+console.error(): Actual errors that prevent the program from working as expected.
+
+console.info(): Helpful, informative messages.
+
+console.debug(): Debugging internal state.
+
+console.table(): Display tabular data in a structured way.
+
+console.group() / console.groupCollapsed(): Group related logs together.
+
+console.time() / console.timeEnd(): Measure performance.
+
+console.assert(): Verify conditions are met (like an assertion in testing).
