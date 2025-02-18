@@ -1,0 +1,6 @@
+1. What is Function Composition?
+Function composition is the process of combining two or more functions to create a new function. This new function executes the given functions in a specific sequence.
+
+In mathematical notation, function composition is represented as: 
+             
+               (f∘g)(x)=f(g(x))
