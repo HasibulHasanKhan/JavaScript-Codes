@@ -11,3 +11,9 @@ Code reusability: Write less and do more.
 Functional programming: Makes JavaScript more declarative.
 
 Improved readability: Simplifies complex operations.
+
+1. What Are Higher-Order Functions?
+A higher-order function is a function that:
+
+Takes another function as an argument (callback function).
+Returns a function as a result.
