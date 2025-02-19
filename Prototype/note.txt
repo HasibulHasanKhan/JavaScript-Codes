@@ -1,0 +1,5 @@
+4. prototype vs __proto__ Differences
+Feature	prototype	__proto__
+Type	Property of functions	Property of objects
+Purpose	Defines properties/methods for instances	Points to an object's prototype
+Usage	Used to set up inheritance	Used to access prototype inheritance
