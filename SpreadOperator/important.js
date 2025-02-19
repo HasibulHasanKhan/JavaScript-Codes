@@ -21,10 +21,9 @@ let r = add2(2, 4);
 console.log(r);
 
 //-----------------------
-
-const number = [1, 2, 3];
-console.log(...number);
-//--------
-const numbers = [5, 8, 2, 10, 3];
-console.log(Math.max(numbers));
-console.log(Math.min(numbers));
+function sum([a, b]) {
+  return a + b;
+}
+let arr = [25, 6];
+// console.log(sum(...arr)); //sum(a,b)
+console.log(sum(arr));
