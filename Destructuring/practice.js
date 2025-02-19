@@ -39,3 +39,20 @@ function sum([a, b]) {
 }
 let arr = [3, 4, 5];
 console.log(sum(arr));
+
+// Fetching API data with destructuring :
+
+fetch("https://jsonplaceholder.typicode.com/users/1")
+  .then((response) => response.json())
+  .then(({ name, email }) => {
+    console.log(`User: ${name}, Email: ${email}`);
+  });
+
+// Normal way :
+fetch("https://jsonplaceholder.typicode.com/users/1")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (user) {
+    console.log("User: " + user.name + ", Email: " + user.email);
+  });
