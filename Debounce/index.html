@@ -2,33 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real-time Input Validation</title>
+    <title>Debouncing Tutorial by Learn with Sumit - LWS</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <form id="myForm">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" />
-      <span id="error-message" style="color: red; display: none"
-        >Invalid email format.</span
-      >
-      <input type="submit" value="Submit" />
-    </form>
+    <div class="container">
+      <button id="button">Click Here</button>
+    </div>
 
-    <script>
-      const emailInput = document.getElementById("email");
-      const errorMessage = document.getElementById("error-message");
-      // "input" that's input deyar sathei error dekabe
-      emailInput.addEventListener("input", function () {
-        const emailValue = emailInput.value;
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailPattern.test(emailValue)) {
-          errorMessage.style.display = "inline";
-        } else {
-          errorMessage.style.display = "none";
-        }
-      });
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
