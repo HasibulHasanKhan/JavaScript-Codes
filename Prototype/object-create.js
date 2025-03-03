@@ -34,3 +34,15 @@ Animal2.prototype.type = "Mammal";
 const dog3 = new Animal2();
 
 console.log(dog3.__proto__ === Animal2.prototype); // true
+
+//-------------------------------
+// const animal3 = {
+//   type: "Mammal",
+//   makeSound() {
+//     console.log("Some generic sound.");
+//   },
+// };
+
+// const dog4 = Object.create(animal3);
+
+// dog4.__proto__.name = "abc";
