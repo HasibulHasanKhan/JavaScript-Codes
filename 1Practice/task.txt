@@ -1,0 +1,35 @@
+ * Dependencies Type :-------------------
+
+ 1. dependencies.
+ 2. devDependencies.
+ 3. optionalDependencies.
+ 4. peerDependencies.
+
+ * Installation Type :------------------
+
+ 1. Specific package-
+   - npm install express
+ 
+ 2. Install as a Dependencies with Flags :
+  > install as a Dependency (--save or Default)
+  - npm install lodash.
+  > Before NPM 5 it's need to use :
+  - npm install lodash --save
+
+ 3. Install as a Development Dependency (-D or --save-dev) :
+  - npm install jest --save-dev
+  - npm install jest -D
+
+ 4. Install as an Optional Dependency(--save-optional)
+  - npm install sharp --save-optional.
+
+ 6. Install a package with version range :
+  - npm install express@^4.17.0
+  - nmp install express@~4.17.3
+  
+  ^4.17.0 → Installs the latest minor version 4.x.x
+
+  ~4.17.3 → Installs the latest patch version 4.17.x
+
+ 7. Install with - g
+  - npm install nodemon -g
