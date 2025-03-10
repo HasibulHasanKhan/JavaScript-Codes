@@ -1,0 +1,6 @@
+* navigator object provides information about the browser and system.
+
+> navigator.userAgent - Returns the user- string.
+> navigator.platform - Returns the OS platform.
+> navigator.onLine - return true if online, otherwise false.
+> navigator.cookieEnabaled - Checks if cookie are enabled.
