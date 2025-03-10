@@ -1,0 +1,10 @@
+* The Browser Object Model allows JavaScript to interact with the borwser . Unlike the document object model, which deals with structure of a web page, the BOM delas with browser - related functinality such as manipulating windows, hanling cookies, controling navigation, and more.
+
+Main Object of BOM :
+1. window : Represents the browser window and is the global object in JavaScript.
+2. navigator : Provides information about the browser and device.
+3. screen : Provides information about the screen.
+4. history : Allows navigation between visited pages.
+5. document : thecnically part of DOM , but accessible through BOM.
+6. frames : Represents the frames inside the window.
+7. localStorage/sessionStorage : Stores data in the browser.
