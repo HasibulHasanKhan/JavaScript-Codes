@@ -1,0 +1,7 @@
+ * window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+
+ > window.location.href - returns the href of the current page.
+ > window.location.hostname - returns the domain name of the web host.
+ > window.location.pathname - returns the path and filename of the current page.
+ > window.location.protocol - returns the web protocol.
+ > window.location.assign() - loads a new document

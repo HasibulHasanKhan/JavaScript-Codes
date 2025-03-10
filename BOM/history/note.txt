@@ -1,0 +1,4 @@
+The window.history object contains the browsers history.
+
+> history.back()
+> history.forward()
