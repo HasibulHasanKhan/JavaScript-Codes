@@ -1,0 +1,3 @@
+* worker(worker.js) - creates a worker
+* postMessage(10) - sends a message to the worker.
+* onmessage - handles response from the worker.
