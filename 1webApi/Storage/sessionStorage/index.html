@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage Api</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="setSessionStorage('username', 'Hasib')">
+        Set session storage username
+      </button>
+    </p>
+
+    <p>
+      <button onclick="getSessionStorage('username')">
+        Get session storage username
+      </button>
+    </p>
+
+    <p>
+      <button onclick="setSessionStorage('name', 'Hasan')">
+        Set session storage name
+      </button>
+    </p>
+
+    <p>
+      <button onclick="getSessionStorage('name')">
+        Get session storage name
+      </button>
+    </p>
+
+    <p>
+      <button onclick="removeSessionStorage('username')">
+        Remove session storage username
+      </button>
+    </p>
+
+    <p>
+      <button onclick="clearSessionStorage()">Clear all session storage</button>
+    </p>
+    <script src="index.js"></script>
+  </body>
+</html>
