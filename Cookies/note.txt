@@ -1,0 +1,21 @@
+Primarily used for :
+1. Storing user preferences.
+2. Keeping users logged in.
+3. Tracking user behavior across sessions.
+
+How cookies work in js :
+- js provides a way to create , read , and delete cookies using the document.cookie property.
+1. Cookies are stored as key-value pairs.
+2. Each cookie is separated by a semicolon (;).
+3. Cookies have optional attributes such as expiration time, path, domain , and security settings.
+
+* HttpOnly - Prevents Access from JavaScript.
+mean HttpOnly cookies cannot be accssed via document.cookie .
+
+* SameSite - Prevent cross site request forgery (CSRF)
+-Strict: Prevents cookies from being sent with cross site request.
+Lax : Allows cookies to be sent only for top-level navigations.
+None : Allows cookies to be sent with cross site request.
+
+* Domian  - restric cookies to a specific domain. :
+* sesure - only send cookies over https.
