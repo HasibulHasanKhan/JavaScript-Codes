@@ -1,0 +1,7 @@
+Method :
+* setItem(key, value)
+* getItem(key)
+* removeItem(key)
+* clear()
+* key(index)
+* length 
