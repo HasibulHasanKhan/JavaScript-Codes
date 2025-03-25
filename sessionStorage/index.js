@@ -6,7 +6,7 @@ function setData(key, value) {
 function getData(key) {
   const value = sessionStorage.getItem(key);
   if (value) {
-    `The value for ${key} is ${value}`;
+    alert(`The value for ${key} is ${value}`);
   } else {
     alert(`${key} does not exist in session storage.`);
   }
